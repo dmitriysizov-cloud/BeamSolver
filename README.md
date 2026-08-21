@@ -66,7 +66,7 @@ For a prismatic beam with constant Young's modulus $E$ and second moment of
 area $J$, the transverse deflection $v(x)$ satisfies
 
 $$
-EJ\,\frac{d^4 v}{dx^4}=p(x),
+EJ\,\frac{d^4 v}{dx^4}=p(x)
 $$
 
 where $p(x)$ is the transverse loading, with signs defined according to the
@@ -82,17 +82,17 @@ applied at $x=b_i$, and a uniform distributed load $q_j$ acting from
 $x=c_j$ to $x=d_j$ are represented, respectively, by
 
 $$
-P_i\,\delta(x-a_i),
+P_i\,\delta(x-a_i)
 $$
 
 $$
--M_i\,\delta'(x-b_i),
+-M_i\,\delta'(x-b_i)
 $$
 
 and
 
 $$
-q_j\left[H(x-c_j)-H(x-d_j)\right],
+q_j\left[H(x-c_j)-H(x-d_j)\right]
 $$
 
 where $\delta$ is the Dirac delta function and $H$ is the Heaviside step
@@ -107,9 +107,11 @@ The governing equation is integrated analytically. For constant $EJ$, the
 resulting beam quantities are related by
 
 $$
-Q(x)=EJ\,v'''(x), \qquad
-M(x)=EJ\,v''(x), \qquad
-\theta(x)=v'(x),
+\begin{aligned}
+Q(x) &= EJ\,v'''(x) \\
+M(x) &= EJ\,v''(x) \\
+\theta(x) &= v'(x)
+\end{aligned}
 $$
 
 where $Q(x)$, $M(x)$, and $\theta(x)$ are the shear force, bending
