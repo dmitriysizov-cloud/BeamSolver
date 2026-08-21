@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use BeamSolver in academic work, please cite this software."
+title: "BeamSolver"
+type: software
+authors:
+  - family-names: "Sizov"
+    given-names: "Dmitry"
+    affiliation: "Nazarbayev University"
+version: "1.0.0"
+date-released: "2026-08-21"
+license: "MIT"
+abstract: >-
+  BeamSolver is a Wolfram Language package for analytical solution of
+  statically determinate Euler-Bernoulli beam problems. It computes support
+  reactions and analytical expressions for shear force, bending moment,
+  rotation angle, and deflection for combinations of concentrated forces,
+  concentrated moments, and uniformly distributed loads.
+keywords:
+  - "Wolfram Language"
+  - "Euler-Bernoulli beam"
+  - "beam analysis"
+  - "structural mechanics"
+  - "symbolic computation"
