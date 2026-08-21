@@ -62,14 +62,14 @@ beam deflection is updated immediately.
 ## Theoretical basis
 
 BeamSolver is based on the linear Euler–Bernoulli theory for slender beams.
-For a prismatic beam with constant Young's modulus \(E\) and second moment of
-area \(J\), the transverse deflection \(v(x)\) satisfies
+For a prismatic beam with constant Young's modulus $E$ and second moment of
+area $J$, the transverse deflection $v(x)$ satisfies
 
-\[
+$$
 EJ\,\frac{d^4 v}{dx^4}=p(x),
-\]
+$$
 
-where \(p(x)\) is the transverse loading, with signs defined according to the
+where $p(x)$ is the transverse loading, with signs defined according to the
 convention used by BeamSolver.
 
 The package uses a generalized-function formulation of the Euler–Bernoulli
@@ -77,25 +77,25 @@ beam equation. This formulation is closely related to the classical
 singularity-function (Macaulay) method, but represents concentrated and
 distributed loads explicitly using Dirac delta and Heaviside functions.
 
-A point force \(P_i\) applied at \(x=a_i\), a concentrated moment \(M_i\)
-applied at \(x=b_i\), and a uniform distributed load \(q_j\) acting from
-\(x=c_j\) to \(x=d_j\) are represented, respectively, by
+A point force $P_i$ applied at $x=a_i$, a concentrated moment $M_i$
+applied at $x=b_i$, and a uniform distributed load $q_j$ acting from
+$x=c_j$ to $x=d_j$ are represented, respectively, by
 
-\[
+$$
 P_i\,\delta(x-a_i),
-\]
+$$
 
-\[
+$$
 -M_i\,\delta'(x-b_i),
-\]
+$$
 
 and
 
-\[
+$$
 q_j\left[H(x-c_j)-H(x-d_j)\right],
-\]
+$$
 
-where \(\delta\) is the Dirac delta function and \(H\) is the Heaviside step
+where $\delta$ is the Dirac delta function and $H$ is the Heaviside step
 function.
 
 Support reactions are determined first from the equations of static
@@ -103,16 +103,16 @@ equilibrium and are then included in the same generalized loading function.
 This makes it possible to describe a beam containing several loads of
 different types by a single governing equation over the entire beam domain.
 
-The governing equation is integrated analytically. For constant \(EJ\), the
+The governing equation is integrated analytically. For constant $EJ$, the
 resulting beam quantities are related by
 
-\[
+$$
 Q(x)=EJ\,v'''(x), \qquad
 M(x)=EJ\,v''(x), \qquad
 \theta(x)=v'(x),
-\]
+$$
 
-where \(Q(x)\), \(M(x)\), and \(\theta(x)\) are the shear force, bending
+where $Q(x)$, $M(x)$, and $\theta(x)$ are the shear force, bending
 moment, and rotation angle, respectively. The four integration constants are
 determined from the appropriate support and end boundary conditions.
 
