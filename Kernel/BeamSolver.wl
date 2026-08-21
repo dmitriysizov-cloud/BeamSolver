@@ -13,7 +13,7 @@ beamReactions::usage="beamReactions[solution] returns the support reactions.";
 
 beamPlots::usage="beamPlots[solution] plots shear force, bending moment, rotation angle, and deflection.";
 
-beamMaxValue::usage="beamMaxValue[solution, quantity] returns the maximum absolute value of the specified beam quantity and its position. Valid quantities are \"ShearForce\", \"BendingMoment\", \"RotationAngle\", and \"Deflection\". beamMaxValue[solution, quantity, {xmin, xmax}] restricts the search to the specified interval.";
+beamMaxValue::usage="beamMaxValue[solution, quantity] returns the value with the largest absolute magnitude and its position. Valid quantities are \"ShearForce\", \"BendingMoment\", \"RotationAngle\", and \"Deflection\". beamMaxValue[solution, quantity, {xmin, xmax}] restricts the search to the specified interval.";
 
 beamInitialParameters::usage="beamInitialParameters[solution] returns the initial rotation angle and deflection.";
 
