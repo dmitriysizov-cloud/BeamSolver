@@ -45,10 +45,18 @@ The package provides:
 - numerical substitution of parameter values;
 - plots of all four beam quantities;
 - determination of the value with the largest absolute magnitude and its
-  position.
+  position;
+- direct use of the analytical solutions in interactive Wolfram Language
+  constructs such as `Manipulate`.
 
 A beam may be defined symbolically, with numerical values stored separately
 under `"Numbers"`.
+
+Because BeamSolver returns analytical expressions rather than only numerical
+results at discrete points, the solution can be used directly in interactive
+visualizations and animations. For example, the position of a moving load can
+be treated as a parameter and varied with `Manipulate`, while the corresponding
+beam deflection is updated immediately.
 
 ## Repository structure
 
@@ -67,15 +75,38 @@ BeamSolver/
 
 ## Installation
 
-Clone or download this repository.
+### Recommended
 
-For local development, load the repository directory as a paclet:
+Download `BeamSolver-1.0.0.paclet` from the latest GitHub Release.
+
+Install it once in Wolfram Language / Mathematica:
+
+```wl
+PacletInstall["path/to/BeamSolver-1.0.0.paclet"]
+```
+
+Then load BeamSolver in any Mathematica session with:
+
+```wl
+Needs["BeamSolver`"]
+```
+
+The installation only needs to be performed once.
+
+### From source
+
+If you clone or download the repository source, you can load the repository
+directory directly as a development paclet:
 
 ```wl
 repo = "path/to/BeamSolver";
 PacletDirectoryLoad[repo];
 Needs["BeamSolver`"];
 ```
+
+This method is mainly intended for development or inspection of the source
+code. For normal use, installing the `.paclet` file from the latest GitHub
+Release is recommended.
 
 ## Basic example
 
@@ -250,6 +281,10 @@ The notebook contains eight analytical benchmark problems:
 8. overhanging beam with a tip force.
 
 It also contains a more general beam subjected to combined loading.
+
+The notebook demonstrates how the analytical BeamSolver solution can be used
+with `Manipulate` to animate the deformation of a beam as a concentrated load
+moves along it.
 
 ## Validation
 
