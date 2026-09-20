@@ -380,7 +380,7 @@ The current version does not model, among other effects:
 ## Requirements
 
 - Wolfram Language / Mathematica
-- BeamSolver paclet version 1.0.0
+- BeamSolver paclet
 
 ## Author
 
