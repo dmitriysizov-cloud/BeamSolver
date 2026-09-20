@@ -6,8 +6,8 @@ authors:
   - family-names: "Sizov"
     given-names: "Dmitry"
     affiliation: "Nazarbayev University"
-version: "1.0.0"
-date-released: "2026-08-21"
+version: "1.1.1"
+date-released: "2026-09-20"
 license: "MIT"
 abstract: >-
   BeamSolver is a Wolfram Language package for analytical solution of

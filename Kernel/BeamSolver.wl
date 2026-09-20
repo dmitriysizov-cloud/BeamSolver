@@ -298,7 +298,7 @@ beamQuantities={"ShearForce","BendingMoment","RotationAngle","Deflection"};
 
 beamQuantityLabels=<|"ShearForce"->"Shear force","BendingMoment"->"Bending moment","RotationAngle"->"Rotation angle","Deflection"->"Deflection"|>;
 
-beamQuantityAxisLabels=<|"ShearForce"->"Q","BendingMoment"->"M","RotationAngle"->"\[Theta]","Deflection"->"y"|>;
+beamQuantityAxisLabels=<|"ShearForce"->"V","BendingMoment"->"M","RotationAngle"->"\[Theta]","Deflection"->"v"|>;
 
 beamQuantityQ[q_String]:=MemberQ[beamQuantities,q]
 beamQuantityQ[___]:=False
@@ -534,10 +534,6 @@ solvedBeamWithValuesQ[___]:=False
 myPlot[fun_,limits_,opts:OptionsPattern[]]:=Plot[fun,limits,opts,GridLines->Automatic,
 Frame->True,PlotStyle->Thick,PlotRange->Full,RotateLabel->False,
 LabelStyle->{Directive[Black,Bold],10}, ImageSize->400,ImagePadding->{{100,30},{30,1}}]
-
-
-(* ::Input::Initialization:: *)
-(*beamPlots[solvedBeam_?solvedBeamWithValuesQ,opts:OptionsPattern[]]:=myPlot[solvedBeam["Solutions"][#][x],{x,-0.001 solvedBeam["Length"],1.001 solvedBeam["Length"]},Exclusions->None,FrameLabel->{"x",beamQuantityAxisLabels[#]},PlotLabel->beamQuantityLabels[#],AxesOrigin->{0,0},Filling->Axis,opts]&/@beamQuantities*)
 
 
 (* ::Input::Initialization:: *)
