@@ -149,12 +149,12 @@ BeamSolver/
 
 ### Recommended
 
-Download `BeamSolver-1.0.0.paclet` from the latest GitHub Release.
+Download the BeamSolver paclet from the latest GitHub Release.
 
 Install it once in Wolfram Language / Mathematica:
 
 ```wl
-PacletInstall["path/to/BeamSolver-1.0.0.paclet"]
+PacletInstall["path/to/BeamSolver-[VERSION NUMBER].paclet"]
 ```
 
 Then load BeamSolver in any Mathematica session with:
