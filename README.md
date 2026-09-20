@@ -355,8 +355,8 @@ The notebook contains eight analytical benchmark problems:
 It also contains a more general beam subjected to combined loading.
 
 The notebook demonstrates how the analytical BeamSolver solution can be used
-with `Manipulate` to animate the deformation of a beam as a concentrated load
-moves along it.
+with `Manipulate` to animate all four beam diagrams a concentrated load or moment
+move along the beam.
 
 ## Validation
 
