@@ -108,13 +108,13 @@ resulting beam quantities are related by
 
 $$
 \begin{aligned}
-Q(x) &= EJv'''(x) \\
+V(x) &= EJv'''(x) \\
 M(x) &= EJv''(x) \\
 \theta(x) &= v'(x)
 \end{aligned}
 $$
 
-where $Q(x)$, $M(x)$, and $\theta(x)$ are the shear force, bending
+where $V(x)$, $M(x)$, and $\theta(x)$ are the shear force, bending
 moment, and rotation angle, respectively. The four integration constants are
 determined from the appropriate support and end boundary conditions.
 
