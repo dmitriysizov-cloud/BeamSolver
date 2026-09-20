@@ -108,13 +108,13 @@ resulting beam quantities are related by
 
 $$
 \begin{aligned}
-Q(x) &= EJv'''(x) \\
+V(x) &= EJv'''(x) \\
 M(x) &= EJv''(x) \\
 \theta(x) &= v'(x)
 \end{aligned}
 $$
 
-where $Q(x)$, $M(x)$, and $\theta(x)$ are the shear force, bending
+where $V(x)$, $M(x)$, and $\theta(x)$ are the shear force, bending
 moment, and rotation angle, respectively. The four integration constants are
 determined from the appropriate support and end boundary conditions.
 
@@ -149,12 +149,12 @@ BeamSolver/
 
 ### Recommended
 
-Download `BeamSolver-1.0.0.paclet` from the latest GitHub Release.
+Download the BeamSolver paclet from the latest GitHub Release.
 
 Install it once in Wolfram Language / Mathematica:
 
 ```wl
-PacletInstall["path/to/BeamSolver-1.0.0.paclet"]
+PacletInstall["path/to/BeamSolver-[VERSION NUMBER].paclet"]
 ```
 
 Then load BeamSolver in any Mathematica session with:
@@ -355,8 +355,8 @@ The notebook contains eight analytical benchmark problems:
 It also contains a more general beam subjected to combined loading.
 
 The notebook demonstrates how the analytical BeamSolver solution can be used
-with `Manipulate` to animate the deformation of a beam as a concentrated load
-moves along it.
+with `Manipulate` to animate all four beam diagrams a concentrated load or moment
+move along the beam.
 
 ## Validation
 
@@ -380,7 +380,7 @@ The current version does not model, among other effects:
 ## Requirements
 
 - Wolfram Language / Mathematica
-- BeamSolver paclet version 1.0.0
+- BeamSolver paclet
 
 ## Author
 
