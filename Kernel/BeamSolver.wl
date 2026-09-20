@@ -533,11 +533,15 @@ solvedBeamWithValuesQ[___]:=False
 (* ::Input::Initialization:: *)
 myPlot[fun_,limits_,opts:OptionsPattern[]]:=Plot[fun,limits,opts,GridLines->Automatic,
 Frame->True,PlotStyle->Thick,PlotRange->Full,RotateLabel->False,
-LabelStyle->{Directive[Black,Bold],12}, ImageSize->400,ImagePadding->{{100,30},{Automatic,Automatic}}]
+LabelStyle->{Directive[Black,Bold],10}, ImageSize->400,ImagePadding->{{100,30},{30,1}}]
 
 
 (* ::Input::Initialization:: *)
-beamPlots[solvedBeam_?solvedBeamWithValuesQ,opts:OptionsPattern[]]:=myPlot[solvedBeam["Solutions"][#][x],{x,-0.001 solvedBeam["Length"],1.001 solvedBeam["Length"]},Exclusions->None,FrameLabel->{"x",beamQuantityAxisLabels[#]},PlotLabel->beamQuantityLabels[#],AxesOrigin->{0,0},Filling->Axis,opts]&/@beamQuantities
+(*beamPlots[solvedBeam_?solvedBeamWithValuesQ,opts:OptionsPattern[]]:=myPlot[solvedBeam["Solutions"][#][x],{x,-0.001 solvedBeam["Length"],1.001 solvedBeam["Length"]},Exclusions->None,FrameLabel->{"x",beamQuantityAxisLabels[#]},PlotLabel->beamQuantityLabels[#],AxesOrigin->{0,0},Filling->Axis,opts]&/@beamQuantities*)
+
+
+(* ::Input::Initialization:: *)
+beamPlots[solvedBeam_?solvedBeamWithValuesQ,opts:OptionsPattern[]]:=Column[myPlot[solvedBeam["Solutions"][#][x],{x,-0.001 solvedBeam["Length"],1.001 solvedBeam["Length"]},Exclusions->None,FrameLabel->{"x",beamQuantityAxisLabels[#]},PlotLabel->beamQuantityLabels[#],AxesOrigin->{0,0},AspectRatio->1/3,Filling->Axis,opts]&/@beamQuantities]
 
 
 (* ::Input::Initialization:: *)
